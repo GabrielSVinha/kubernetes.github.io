@@ -106,5 +106,3 @@ toc:
   - title: Kubernetes Issue Tracker on GitHub
     path: https://github.com/kubernetes/kubernetes/issues/
   - docs/reference/security.md
-
-

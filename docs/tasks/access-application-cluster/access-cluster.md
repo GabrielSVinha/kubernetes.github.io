@@ -141,8 +141,12 @@ as the kubectl CLI does to locate and authenticate to the apiserver. See this [e
 
 #### Other languages
 
+<<<<<<< HEAD
 There are [client libraries](/docs/reference/client-libraries/) for accessing the API from other languages.
 See documentation for other libraries for how they authenticate.
+=======
+There are [client libraries](https://git.k8s.io/community/contributors/devel/client-libraries.md) for accessing the API from other languages. See documentation for other libraries for how they authenticate.
+>>>>>>> Update links to proper repos
 
 ### Accessing the API from a Pod
 
@@ -174,7 +178,11 @@ From within a pod the recommended ways to connect to API are:
     in any container of the pod can access it.  See this [example of using kubectl proxy
     in a pod](https://github.com/kubernetes/examples/tree/{{page.githubbranch}}/staging/kubectl-container/).
   - use the Go client library, and create a client using the `rest.InClusterConfig()` and `kubernetes.NewForConfig()` functions.
+<<<<<<< HEAD
     They handle locating and authenticating to the apiserver. [example](https://git.k8s.io/client-go/examples/in-cluster-client-configuration/main.go)
+=======
+    They handle locating and authenticating to the apiserver. [example](https://git.k8s.io/client-go/examples/in-cluster/main.go)
+>>>>>>> Update links to proper repos
 
 In each case, the credentials of the pod are used to communicate securely with the apiserver.
 

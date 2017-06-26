@@ -8,7 +8,11 @@ You can use a `podpreset` object to inject certain information into pods at crea
 time. This information can include secrets, volumes, volume mounts, and environment
 variables.
 
+<<<<<<< HEAD
 See [PodPreset proposal](https://git.k8s.io/community/contributors/design-proposals/service-catalog/pod-preset.md) for more information.
+=======
+See [PodPreset proposal](https://git.k8s.io/community/contributors/design-proposals/pod-preset.md) for more information.
+>>>>>>> Update links to proper repos
 
 * TOC
 {:toc}

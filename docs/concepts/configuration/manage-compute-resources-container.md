@@ -10,7 +10,11 @@ requests specified, the scheduler can make better decisions about which nodes to
 place Pods on. And when Containers have their limits specified, contention for
 resources on a node can be handled in a specified manner. For more details about
 the difference between requests and limits, see
+<<<<<<< HEAD
 [Resource QoS](https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md).
+=======
+[Resource QoS](https://git.k8s.io/community/contributors/design-proposals/resource-qos.md).
+>>>>>>> Update links to proper repos
 
 {% endcapture %}
 
@@ -238,7 +242,11 @@ The amount of resources available to Pods is less than the node capacity, becaus
 system daemons use a portion of the available resources. The `allocatable` field
 [NodeStatus](/docs/resources-reference/{{page.version}}/#nodestatus-v1-core)
 gives the amount of resources that are available to Pods. For more information, see
+<<<<<<< HEAD
 [Node Allocatable Resources](https://git.k8s.io/community/contributors/design-proposals/node/node-allocatable.md).
+=======
+[Node Allocatable Resources](https://git.k8s.io/community/contributors/design-proposals/node-allocatable.md).
+>>>>>>> Update links to proper repos
 
 The [resource quota](/docs/concepts/policy/resource-quotas/) feature can be configured
 to limit the total amount of resources that can be consumed. If used in conjunction

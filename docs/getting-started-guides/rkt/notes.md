@@ -67,7 +67,11 @@ Exponential restart back-off for a failing container is currently not supported.
 
 ## Experimental NVIDIA GPU support
 
+<<<<<<< HEAD
 The `--experimental-nvidia-gpus` flag, and related [GPU features](https://git.k8s.io/community/contributors/design-proposals/resource-management/gpu-support.md) are not supported.
+=======
+The `--experimental-nvidia-gpus` flag, and related [GPU features](https://git.k8s.io/community/contributors/design-proposals/gpu-support.md) are not supported.
+>>>>>>> Update links to proper repos
 
 ## QoS Classes
 

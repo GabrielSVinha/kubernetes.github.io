@@ -18,7 +18,11 @@ Kubernetes comes with *vSphere Cloud Provider*, a cloud provider for vSphere tha
 
 To deploy Kubernetes on vSphere and use the vSphere Cloud Provider, see [Kubernetes-Anywhere](https://github.com/kubernetes/kubernetes-anywhere). 
 
+<<<<<<< HEAD
 Detailed steps can be found at the [getting started with Kubernetes-Anywhere on vSphere](https://git.k8s.io/kubernetes-anywhere/phase1/vsphere/README.md) page.
+=======
+Detailed steps can be found at the [getting started with Kubernetes-Anywhere on vSphere page](https://git.k8s.io/kubernetes-anywhere/phase1/vsphere/README.md)
+>>>>>>> Update links to proper repos
 
 ### vSphere Cloud Provider
 
@@ -30,7 +34,12 @@ vSphere Cloud Provider allows Kubernetes to use vSphere managed enterprise grade
 
 For more detail visit [vSphere Storage for Kubernetes Documentation](https://vmware.github.io/vsphere-storage-for-kubernetes/documentation/index.html).
 
+<<<<<<< HEAD
 Documentation for how to use vSphere managed storage can be found in the [persistent volumes user guide](/docs/concepts/storage/persistent-volumes/#vsphere) and the [volumes user guide](/docs/concepts/storage/volumes/#vspherevolume).
+=======
+Examples can be found
+[here](https://git.k8s.io/kubernetes/examples/volumes/vsphere)
+>>>>>>> Update links to proper repos
 
 Examples can be found [here](https://github.com/kubernetes/examples/tree/master/staging/volumes/vsphere).
 
@@ -61,7 +70,11 @@ For each of the virtual machine nodes that will be participating in the cluster,
       export GOVC_PASSWORD='vCenter Password'
       export GOVC_INSECURE=1
 
+<<<<<<< HEAD
 * Find Node VM Paths
+=======
+* Provide the cloud config file to each instance of kubelet, apiserver and controller manager via ```--cloud-config=<path to file>``` flag. Cloud config [template can be found at Kubernetes-Anywhere](https://git.k8s.io/kubernetes-anywhere/phase1/vsphere/vsphere.conf)
+>>>>>>> Update links to proper repos
 
       govc ls /datacenter/vm/<vm-folder-name>
 
@@ -117,7 +130,13 @@ vSphere Cloud Provider requires the following minimal set of privileges to inter
 
 This config file needs to be placed in the shared directory which should be accessible from kubelet container, controller-manager pod, and API server pod.
 
+<<<<<<< HEAD
 **```vsphere.conf``` for Master Node:**
+=======
+* You need administrator credentials to an ESXi machine or vCenter instance with write mode api access enabled (not available on the free ESXi license).
+* You must have Go (see [here](https://git.k8s.io/community/contributors/devel/development.md#go-versions) for supported versions) installed: [www.golang.org](http://www.golang.org).
+* You must have your `GOPATH` set up and include `$GOPATH/bin` in your `PATH`.
+>>>>>>> Update links to proper repos
 
 ```
 [Global]

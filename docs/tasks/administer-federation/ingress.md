@@ -298,8 +298,14 @@ Check that:
 {% endcapture %}
 
 {% capture whatsnext %}
+<<<<<<< HEAD
 *  If you need assistance, use one of the [support channels](/docs/tasks/debug-application-cluster/troubleshooting/) to seek assistance.
  *  For details about use cases that motivated this work, see
  [Federation proposal](https://git.k8s.io/community/contributors/design-proposals/federation/federation.md).
+=======
+*  If you need assistance, use one of the [support channels](http://kubernetes.io/docs/troubleshooting/) to seek assistance.
+ *  For details about use cases that motivated this work, see 
+ [Federation proposal](https://git.k8s.io/community/contributors/design-proposals/federation.md).
+>>>>>>> Update links to proper repos
 {% endcapture %}
 {% include templates/task.md %}

@@ -121,7 +121,11 @@ Kubernetes officially supports client libraries for [Go](#go-client) and
 * Write an application atop of the client-go clients. Note that client-go defines its own API objects, so if needed, please import API definitions from client-go rather than from the main repository, e.g., `import "k8s.io/client-go/1.4/pkg/api/v1"` is correct.
 
 The Go client can use the same [kubeconfig file](/docs/concepts/cluster-administration/authenticate-across-clusters-kubeconfig/)
+<<<<<<< HEAD
 as the kubectl CLI does to locate and authenticate to the apiserver. See this [example](https://git.k8s.io/client-go/examples/out-of-cluster-client-configuration/main.go):
+=======
+as the kubectl CLI does to locate and authenticate to the apiserver. See this [example](https://git.k8s.io/client-go/examples/out-of-cluster/main.go):
+>>>>>>> Update links to proper repos
 
 ```golang
 import (
@@ -164,7 +168,11 @@ for i in ret.items:
 
 #### Other languages
 
+<<<<<<< HEAD
 There are [client libraries](/docs/reference/client-libraries/) for accessing the API from other languages. See documentation for other libraries for how they authenticate.
+=======
+There are [client libraries](https://git.k8s.io/community/contributors/devel/client-libraries.md) for accessing the API from other languages. See documentation for other libraries for how they authenticate.
+>>>>>>> Update links to proper repos
 
 ### Accessing the API from a Pod
 
@@ -196,7 +204,11 @@ From within a pod the recommended ways to connect to API are:
     in any container of the pod can access it.  See this [example of using kubectl proxy
     in a pod](https://github.com/kubernetes/examples/tree/{{page.githubbranch}}/staging/kubectl-container/).
   - use the Go client library, and create a client using the `rest.InClusterConfig()` and `kubernetes.NewForConfig()` functions.
+<<<<<<< HEAD
     They handle locating and authenticating to the apiserver. [example](https://git.k8s.io/client-go/examples/in-cluster-client-configuration/main.go)
+=======
+    They handle locating and authenticating to the apiserver. [example](https://git.k8s.io/client-go/examples/in-cluster/main.go)
+>>>>>>> Update links to proper repos
 
 In each case, the credentials of the pod are used to communicate securely with the apiserver.
 

@@ -40,7 +40,11 @@ Run `kubectl get nodes` to get the names of your cluster's nodes. Pick out the o
 
 If this fails with an "invalid command" error, you're likely using an older version of kubectl that doesn't have the `label` command. In that case, see the [previous version](https://github.com/kubernetes/kubernetes/blob/a053dbc313572ed60d89dae9821ecab8bfd676dc/examples/node-selection/README.md) of this guide for instructions on how to manually set labels on a node.
 
+<<<<<<< HEAD
 Also, note that label keys must be in the form of DNS labels (as described in the [identifiers doc](https://git.k8s.io/community/contributors/design-proposals/architecture/identifiers.md)), meaning that they are not allowed to contain any upper-case letters.
+=======
+Also, note that label keys must be in the form of DNS labels (as described in the [identifiers doc](https://git.k8s.io/community/contributors/design-proposals/identifiers.md)), meaning that they are not allowed to contain any upper-case letters.
+>>>>>>> Update links to proper repos
 
 You can verify that it worked by re-running `kubectl get nodes --show-labels` and checking that the node now has a label.
 
@@ -142,7 +146,11 @@ If you specify multiple `matchExpressions` associated with `nodeSelectorTerms`, 
 If you remove or change the label of the node where the pod is scheduled, the pod won't be removed. In other words, the affinity selection works only at the time of scheduling the pod.
 
 For more information on node affinity, see the design doc
+<<<<<<< HEAD
 [here](https://git.k8s.io/community/contributors/design-proposals/scheduling/nodeaffinity.md).
+=======
+[here](https://git.k8s.io/community/contributors/design-proposals/nodeaffinity.md).
+>>>>>>> Update links to proper repos
 
 ### Inter-pod affinity and anti-affinity (beta feature)
 
@@ -183,7 +191,11 @@ value V that is running a pod that has a label with key "security" and value "S1
 rule says that the pod prefers to not schedule onto a node if that node is already running a pod with label
 having key "security" and value "S2". (If the `topologyKey` were `failure-domain.beta.kubernetes.io/zone` then
 it would mean that the pod cannot schedule onto a node if that node is in the same zone as a pod with
+<<<<<<< HEAD
 label having key "security" and value "S2".) See the [design doc](https://git.k8s.io/community/contributors/design-proposals/scheduling/podaffinity.md).
+=======
+label having key "security" and value "S2".) See the [design doc](https://git.k8s.io/community/contributors/design-proposals/podaffinity.md).
+>>>>>>> Update links to proper repos
 for many more examples of pod affinity and anti-affinity, both the `requiredDuringSchedulingIgnoredDuringExecution`
 flavor and the `preferredDuringSchedulingIgnoredDuringExecution` flavor.
 
@@ -204,7 +216,14 @@ If omitted, it defaults to the namespace of the pod where the affinity/anti-affi
 If defined but empty, it means "all namespaces."
 
 All `matchExpressions` associated with `requiredDuringSchedulingIgnoredDuringExecution` affinity and anti-affinity
+<<<<<<< HEAD
 must be satisfied for the pod to schedule onto a node.
+=======
+must be satisfied for the pod to schedule onto a node. 
+
+For more information on inter-pod affinity/anti-affinity, see the design doc
+[here](https://git.k8s.io/community/contributors/design-proposals/podaffinity.md).
+>>>>>>> Update links to proper repos
 
 #### More Practical Use-cases
 
@@ -298,5 +317,29 @@ Highly Available database statefulset has one master and three replicas, one may
 For more information on inter-pod affinity/anti-affinity, see the design doc
 [here](https://git.k8s.io/community/contributors/design-proposals/scheduling/podaffinity.md).
 
+<<<<<<< HEAD
 You may want to check [Taints](/docs/concepts/configuration/taint-and-toleration/)
 as well, which allow a *node* to *repel* a set of pods.
+=======
+(For the node not ready case, change the key to `node.alpha.kubernetes.io/notReady`.)
+
+Note that Kubernetes automatically adds a toleration for
+`node.alpha.kubernetes.io/notReady` with `tolerationSeconds=300`
+unless the pod configuration provided
+by the user already has a toleration for `node.alpha.kubernetes.io/notReady`.
+Likewise it adds a toleration for
+`node.alpha.kubernetes.io/unreachable` with `tolerationSeconds=300`
+unless the pod configuration provided
+by the user already has a toleration for `node.alpha.kubernetes.io/unreachable`.
+
+These automatically-added tolerations ensure that
+the default pod behavior of remaining bound for 5 minutes after one of these
+problems is detected is maintained.
+The two default tolerations are added by the [DefaultTolerationSeconds
+admission controller](https://git.k8s.io/kubernetes/plugin/pkg/admission/defaulttolerationseconds).
+
+[DaemonSet](https://kubernetes.io/docs/admin/daemons/) pods are created with
+`NoExecute` tolerations for `node.alpha.kubernetes.io/unreachable` and `node.alpha.kubernetes.io/notReady`
+with no `tolerationSeconds`. This ensures that DaemonSet pods are never evicted due
+to these problems, which matches the behavior when this feature is disabled.
+>>>>>>> Update links to proper repos

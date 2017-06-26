@@ -63,14 +63,22 @@ to define *Hard* resource usage limits that a *Namespace* may consume.
 A limit range defines min/max constraints on the amount of resources a single entity can consume in
 a *Namespace*.
 
+<<<<<<< HEAD
 See [Admission control: Limit Range](https://git.k8s.io/community/contributors/design-proposals/resource-management/admission_control_limit_range.md)
+=======
+See [Admission control: Limit Range](https://git.k8s.io/community/contributors/design-proposals/admission_control_limit_range.md)
+>>>>>>> Update links to proper repos
 
 A namespace can be in one of two phases:
 
    * `Active` the namespace is in use
    * `Terminating` the namespace is being deleted, and can not be used for new objects
 
+<<<<<<< HEAD
 See the [design doc](https://git.k8s.io/community/contributors/design-proposals/architecture/namespaces.md#phases) for more details.
+=======
+See the [design doc](https://git.k8s.io/community/contributors/design-proposals/namespaces.md#phases) for more details.
+>>>>>>> Update links to proper repos
 
 ## Creating a new namespace
 
@@ -93,7 +101,17 @@ Note that the name of your namespace must be a DNS compatible label.
 
 There's an optional field `finalizers`, which allows observables to purge resources whenever the namespace is deleted. Keep in mind that if you specify a nonexistent finalizer, the namespace will be created but will get stuck in the `Terminating` state if the user tries to delete it.
 
+<<<<<<< HEAD
 More information on `finalizers` can be found in the namespace [design doc](https://git.k8s.io/community/contributors/design-proposals/architecture/namespaces.md#finalizers).
+=======
+More information on `finalizers` can be found in the namespace [design doc](https://git.k8s.io/community/contributors/design-proposals/namespaces.md#finalizers).
+
+
+### Working in namespaces
+
+See [Setting the namespace for a request](/docs/user-guide/namespaces/#setting-the-namespace-for-a-request)
+and [Setting the namespace preference](/docs/user-guide/namespaces/#setting-the-namespace-preference).
+>>>>>>> Update links to proper repos
 
 ## Deleting a namespace
 
@@ -349,4 +367,9 @@ across namespaces, you need to use the fully qualified domain name (FQDN).
 * See [namespaces design](https://github.com/kubernetes/community/blob/{{page.githubbranch}}/contributors/design-proposals/architecture/namespaces.md).
 {% endcapture %}
 
+<<<<<<< HEAD
 {% include templates/task.md %}
+=======
+Details of the design of namespaces in Kubernetes, including a [detailed example](https://git.k8s.io/community/contributors/design-proposals/namespaces.md#example-openshift-origin-managing-a-kubernetes-namespace)
+can be found in the [namespaces design doc](https://git.k8s.io/community/contributors/design-proposals/namespaces.md)
+>>>>>>> Update links to proper repos

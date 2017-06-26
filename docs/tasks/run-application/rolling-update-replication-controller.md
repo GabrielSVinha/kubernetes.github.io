@@ -16,7 +16,11 @@ which in turn uses a
 For more information, see
 [Running a Stateless Application Using a Deployment](/docs/tasks/run-application/run-stateless-application-deployment/).
 
+<<<<<<< HEAD
 To update a service without an outage, `kubectl` supports what is called ['rolling update'](/docs/user-guide/kubectl/v1.6/#rolling-update), which updates one pod at a time, rather than taking down the entire service at the same time. See the [rolling update design document](https://git.k8s.io/community/contributors/design-proposals/cli/simple-rolling-update.md) and the [example of rolling update](/docs/tasks/run-application/rolling-update-replication-controller/) for more information.
+=======
+To update a service without an outage, `kubectl` supports what is called ['rolling update'](/docs/user-guide/kubectl/v1.6/#rolling-update), which updates one pod at a time, rather than taking down the entire service at the same time. See the [rolling update design document](https://git.k8s.io/community/contributors/design-proposals/simple-rolling-update.md) and the [example of rolling update](/docs/tasks/run-application/rolling-update-replication-controller/) for more information.
+>>>>>>> Update links to proper repos
 
 Note that `kubectl rolling-update` only supports Replication Controllers. However, if you deploy applications with Replication Controllers,
 consider switching them to [Deployments](/docs/concepts/workloads/controllers/deployment/). A Deployment is a higher-level controller that automates rolling updates
@@ -156,7 +160,11 @@ spec:
         - containerPort: 80
 ```
 
+<<<<<<< HEAD
 To update to version 1.9.1, you can use [`kubectl rolling-update --image`](https://git.k8s.io/community/contributors/design-proposals/cli/simple-rolling-update.md) to specify the new image:
+=======
+To update to version 1.9.1, you can use [`kubectl rolling-update --image`](https://git.k8s.io/community/contributors/design-proposals/simple-rolling-update.md) to specify the new image:
+>>>>>>> Update links to proper repos
 
 ```shell
 $ kubectl rolling-update my-nginx --image=nginx:1.9.1

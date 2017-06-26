@@ -240,7 +240,11 @@ The annotations added contain the information on what compute resources were aut
 
 See the [InitialResouces proposal](https://git.k8s.io/community/contributors/design-proposals/autoscaling/initial-resources.md) for more details.
 
+<<<<<<< HEAD
 ### LimitPodHardAntiAffinity
+=======
+See the [resourceQuota design doc](https://git.k8s.io/community/contributors/design-proposals/admission_control_resource_quota.md) and the [example of Resource Quota](/docs/concepts/policy/resource-quotas/) for more details.
+>>>>>>> Update links to proper repos
 
 This plug-in denies any pod that defines `AntiAffinity` topology key other than
 `kubernetes.io/hostname` in `requiredDuringSchedulingRequiredDuringExecution`.
@@ -253,7 +257,11 @@ your Kubernetes deployment, you MUST use this plug-in to enforce those constrain
 be used to apply default resource requests to Pods that don't specify any; currently, the default LimitRanger
 applies a 0.1 CPU requirement to all Pods in the `default` namespace.
 
+<<<<<<< HEAD
 See the [limitRange design doc](https://git.k8s.io/community/contributors/design-proposals/resource-management/admission_control_limit_range.md) and the [example of Limit Range](/docs/tasks/configure-pod-container/limit-range/) for more details.
+=======
+See the [limitRange design doc](https://git.k8s.io/community/contributors/design-proposals/admission_control_limit_range.md) and the [example of Limit Range](/docs/tasks/configure-pod-container/limit-range/) for more details.
+>>>>>>> Update links to proper repos
 
 ### NamespaceAutoProvision
 
@@ -265,8 +273,12 @@ a namespace prior to its usage.
 
 ### NamespaceExists
 
+<<<<<<< HEAD
 This plug-in checks all requests on namespaced resources other than `Namespace` itself.
 If the namespace referenced from a request doesn't exist, the request is rejected.
+=======
+See the [InitialResouces proposal](https://git.k8s.io/community/contributors/design-proposals/initial-resources.md) for more details.
+>>>>>>> Update links to proper repos
 
 ### NamespaceLifecycle
 

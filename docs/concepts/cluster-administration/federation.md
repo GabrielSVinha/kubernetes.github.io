@@ -38,7 +38,11 @@ why you might want multiple clusters are:
 * Scalability: There are scalability limits to a single kubernetes cluster (this
   should not be the case for most users. For more details:
   [Kubernetes Scaling and Performance Goals](https://git.k8s.io/community/sig-scalability/goals.md)).
+<<<<<<< HEAD
 * [Hybrid cloud](#hybrid-cloud-capabilities): You can have multiple clusters on different cloud providers or
+=======
+* [Hybrid cloud](###hybrid-cloud-capabilities): You can have multiple clusters on different cloud providers or
+>>>>>>> Update links to proper repos
   on-premises data centers.
 
 ### Caveats

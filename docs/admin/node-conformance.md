@@ -84,7 +84,11 @@ sudo docker run -it --rm --privileged --net=host \
   gcr.io/google_containers/node-test:0.2
 ```
 
+<<<<<<< HEAD
 Node conformance test is a containerized version of [node e2e test](https://github.com/kubernetes/community/blob/{{page.githubbranch}}/contributors/devel/e2e-node-tests.md).
+=======
+Node conformance test is a containerized version of [node e2e test](https://git.k8s.io/community/contributors/devel/e2e-node-tests.md).
+>>>>>>> Update links to proper repos
 By default, it runs all conformance tests.
 
 Theoretically, you can run any node e2e test if you configure the container and

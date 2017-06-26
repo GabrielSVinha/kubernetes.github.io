@@ -206,7 +206,13 @@ Deleting or scaling a StatefulSet down does not delete the volumes associated wi
 
 2. Run the following command to delete the Cassandra `Service`.
 
+<<<<<<< HEAD
        kubectl delete service -l app=cassandra
+=======
+Refer to the custom seed provider [README](https://git.k8s.io/examples/cassandra/java/README.md) for further
+`KubernetesSeedProvider` configurations. For this example you should not need
+to customize the Seed Provider configurations.
+>>>>>>> Update links to proper repos
 
 {% endcapture %}
 

@@ -99,7 +99,11 @@ It is recommended that the kubernetes system daemons are placed under a top
 level control group (`runtime.slice` on systemd machines for example). Each
 system daemon should ideally run within its own child control group. Refer to
 [this
+<<<<<<< HEAD
 doc](https://git.k8s.io/community/contributors/design-proposals/node/node-allocatable.md#recommended-cgroups-setup)
+=======
+doc](https://git.k8s.io/community/contributors/design-proposals/node-allocatable.md#recommended-cgroups-setup)
+>>>>>>> Update links to proper repos
 for more details on recommended control group hierarchy.
 
 Note that Kubelet **does not** create `--kube-reserved-cgroup` if it doesn't

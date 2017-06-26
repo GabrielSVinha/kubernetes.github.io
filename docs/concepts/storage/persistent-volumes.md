@@ -157,7 +157,11 @@ spec:
 
 ### Capacity
 
+<<<<<<< HEAD
 Generally, a PV will have a specific storage capacity.  This is set using the PV's `capacity` attribute.  See the Kubernetes [Resource Model](https://git.k8s.io/community/contributors/design-proposals/scheduling/resources.md) to understand the units expected by `capacity`.
+=======
+Generally, a PV will have a specific storage capacity.  This is set using the PV's `capacity` attribute.  See the Kubernetes [Resource Model](https://git.k8s.io/community/contributors/design-proposals/resources.md) to understand the units expected by `capacity`.
+>>>>>>> Update links to proper repos
 
 Currently, storage size is the only resource that can be set or requested.  Future attributes may include IOPS, throughput, etc.
 
@@ -311,7 +315,11 @@ Claims use the same conventions as volumes when requesting storage with specific
 
 ### Resources
 
+<<<<<<< HEAD
 Claims, like pods, can request specific quantities of a resource.  In this case, the request is for storage.  The same [resource model](https://git.k8s.io/community/contributors/design-proposals/scheduling/resources.md) applies to both volumes and claims.
+=======
+Claims, like pods, can request specific quantities of a resource.  In this case, the request is for storage.  The same [resource model](https://git.k8s.io/community/contributors/design-proposals/resources.md) applies to both volumes and claims.
+>>>>>>> Update links to proper repos
 
 ### Selector
 
@@ -442,7 +450,11 @@ for provisioning PVs. This field must be specified.
 You are not restricted to specifying the "internal" provisioners
 listed here (whose names are prefixed with "kubernetes.io" and shipped
 alongside Kubernetes). You can also run and specify external provisioners,
+<<<<<<< HEAD
 which are independent programs that follow a [specification](https://git.k8s.io/community/contributors/design-proposals/storage/volume-provisioning.md)
+=======
+which are independent programs that follow a [specification](https://git.k8s.io/community/contributors/design-proposals/volume-provisioning.md)
+>>>>>>> Update links to proper repos
 defined by Kubernetes. Authors of external provisioners have full discretion
 over where their code lives, how the provisioner is shipped, how it needs to be
 run, what volume plugin it uses (including Flex), etc. The repository [kubernetes-incubator/external-storage](https://github.com/kubernetes-incubator/external-storage)
@@ -536,7 +548,11 @@ parameters:
   ```
   $ kubectl create secret generic heketi-secret --type="kubernetes.io/glusterfs" --from-literal=key='opensesame' --namespace=default
   ```
+<<<<<<< HEAD
   Example of a secret can be found in [glusterfs-provisioning-secret.yaml](https://github.com/kubernetes/examples/tree/master/staging/persistent-volume-provisioning/glusterfs/glusterfs-secret.yaml).
+=======
+  Example of a secret can be found in [glusterfs-provisioning-secret.yaml](https://git.k8s.io/kubernetes/examples/persistent-volume-provisioning/glusterfs/glusterfs-secret.yaml).
+>>>>>>> Update links to proper repos
 * `clusterid`: `630372ccdc720a92c681fb928f27b53f` is the ID of the cluster which will be used by Heketi when provisioning the volume. It can also be a list of clusterids, for ex:
   "8452344e2becec931ece4e33c4674e4e,42982310de6c63381718ccfa6d8cf397". This is an optional parameter.
 * `gidMin`, `gidMax` : The minimum and maximum value of GID range for the storage class. A unique value (GID) in this range ( gidMin-gidMax ) will be used for dynamically provisioned volumes. These are optional values. If not specified, the volume will be provisioned with a value between 2000-2147483647 which are defaults for gidMin and gidMax respectively.
@@ -634,7 +650,11 @@ parameters:
 
     vSphere Infrastructure(VI) administrator can specify storage requirements for applications in terms of storage capabilities while creating a storage class inside Kubernetes. Please note that while creating a StorageClass, administrator should specify storage capability names used in the table above as these names might differ from the ones used by VSAN. For example - Number of disk stripes per object is referred to as stripeWidth in VSAN documentation however vSphere Cloud Provider uses a friendly name diskStripes.
 
+<<<<<<< HEAD
 You can see [vSphere example](https://github.com/kubernetes/examples/tree/master/staging/volumes/vsphere) for more details.
+=======
+You can see [vSphere example](https://git.k8s.io/kubernetes/examples/volumes/vsphere) for more details.
+>>>>>>> Update links to proper repos
 
 #### Ceph RBD
 
