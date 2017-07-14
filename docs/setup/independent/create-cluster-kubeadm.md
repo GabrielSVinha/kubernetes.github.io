@@ -203,11 +203,6 @@ You can install a pod network add-on with the following command:
 kubectl apply -f <add-on.yaml>
 ```
 
-<<<<<<< HEAD
-=======
-Please refer to the specific add-on installation guide for exact details.
-
->>>>>>> Update links to proper repos
 **NOTE:** You can install **only one** pod network per cluster.
 
 
@@ -377,11 +372,7 @@ kubectl --kubeconfig ./admin.conf get nodes
 **Note:** If you are using GCE, instances disable ssh access for root by default.
 If that's the case you can log in to the machine, copy the file someplace that
 can be accessed and then use
-<<<<<<< HEAD
 [`gcloud compute copy-files`](https://cloud.google.com/sdk/gcloud/reference/compute/copy-files).
-=======
-[`gcloud compute copy-files`](https://cloud.google.com/sdk/gcloud/reference/compute/copy-files)
->>>>>>> Update links to proper repos
 
 ### (Optional) Proxying API Server to localhost
 
@@ -590,13 +581,13 @@ cat /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 
 If the Docker cgroup driver and the kubelet config don't match, change the kubelet config to match the Docker cgroup driver.
 
-Update 
+Update
 
 ```bash
-KUBELET_CGROUP_ARGS=--cgroup-driver=systemd 
+KUBELET_CGROUP_ARGS=--cgroup-driver=systemd
 ```
 
-To 
+To
 
 ```bash
 KUBELET_CGROUP_ARGS=--cgroup-driver=cgroupfs
