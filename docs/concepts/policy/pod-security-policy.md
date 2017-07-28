@@ -8,11 +8,7 @@ Objects of type `PodSecurityPolicy` govern the ability
 to make requests on a pod that affect the `SecurityContext` that will be
 applied to a pod and container.
 
-<<<<<<< HEAD
 See [PodSecurityPolicy proposal](https://git.k8s.io/community/contributors/design-proposals/auth/security-context-constraints.md) for more information.
-=======
-See [PodSecurityPolicy proposal](https://git.k8s.io/community/contributors/design-proposals/security-context-constraints.md) for more information.
->>>>>>> Update links to proper repos
 
 * TOC
 {:toc}
@@ -128,7 +124,7 @@ configMap, downwardAPI, emptyDir, persistentVolumeClaim, secret, and projected.
 
 ### Host Network
  - *HostPorts*, default `empty`. List of `HostPortRange`, defined by `min`(inclusive) and `max`(inclusive), which define the allowed host ports.
- 
+
 ## Admission
 
 _Admission control_ with `PodSecurityPolicy` allows for control over the
@@ -225,11 +221,7 @@ access should be given to the service account specified on the pod spec
 template. Examples of resources that create pods on behalf of a user are
 Deployments, ReplicaSets, etc.
 
-<<<<<<< HEAD
 For more details, see the
 [PodSecurityPolicy RBAC example](https://git.k8s.io/examples/staging/podsecuritypolicy/rbac/README.md)
 of applying PodSecurityPolicy to control access to privileged containers based
 on role and groups when deploying Pods directly.
-=======
-PodSecurityPolicy authorization uses the union of all policies available to the user creating the pod and the service account specified on the pod. When pods are created via a Deployment, ReplicaSet, etc, it is Controller Manager that creates the pod, so if it is running against the unsecured API port, all PodSecurityPolicy objects would be allowed, and you could not effectively subdivide access. Access to given PSP policies for a user will be effective only when deploying Pods directly. For more details, see the [PodSecurityPolicy RBAC example](https://git.k8s.io/kubernetes/examples/podsecuritypolicy/rbac/README.md) of applying PodSecurityPolicy to control access to privileged containers based on role and groups when deploying Pods directly.
->>>>>>> Update links to proper repos

@@ -4,9 +4,6 @@ assignees:
 - cdrage
 
 title: Translate a Docker Compose File to Kubernetes Resources
-redirect_from:
-- "/docs/tools/kompose/"
-- "/docs/tools/kompose/index.html"
 ---
 
 * TOC
@@ -28,7 +25,7 @@ version: "2"
 services:
 
   redis-master:
-    image: gcr.io/google_containers/redis:e2e 
+    image: gcr.io/google_containers/redis:e2e
     ports:
       - "6379"
 
@@ -49,12 +46,12 @@ services:
       kompose.service.type: LoadBalancer
 ```
 
-__2. Run `kompose up` in the same directory__ 
+__2. Run `kompose up` in the same directory__
 
 ```bash
 $ kompose up
-We are going to create Kubernetes Deployments, Services and PersistentVolumeClaims for your Dockerized application. 
-If you need different kind of resources, use the 'kompose convert' and 'kubectl create -f' commands instead. 
+We are going to create Kubernetes Deployments, Services and PersistentVolumeClaims for your Dockerized application.
+If you need different kind of resources, use the 'kompose convert' and 'kubectl create -f' commands instead.
 
 INFO Successfully created Service: redis          
 INFO Successfully created Service: web            
@@ -134,7 +131,7 @@ We have multiple ways to install Kompose. Our prefered method is downloading the
 Kompose is released via GitHub on a three-week cycle, you can see all current releases on the [GitHub release page](https://github.com/kubernetes/kompose/releases).
 
 ```sh
-# Linux 
+# Linux
 curl -L https://github.com/kubernetes/kompose/releases/download/v1.1.0/kompose-linux-amd64 -o kompose
 
 # macOS
@@ -238,19 +235,19 @@ INFO Kubernetes file "redis-slave-service.yaml" created
 INFO Kubernetes file "frontend-deployment.yaml" created      
 INFO Kubernetes file "mlbparks-deployment.yaml" created      
 INFO Kubernetes file "mongodb-deployment.yaml" created       
-INFO Kubernetes file "mongodb-claim0-persistentvolumeclaim.yaml" created 
+INFO Kubernetes file "mongodb-claim0-persistentvolumeclaim.yaml" created
 INFO Kubernetes file "redis-master-deployment.yaml" created  
 INFO Kubernetes file "redis-slave-deployment.yaml" created   
 
 $ ls
-mlbparks-deployment.yaml  mongodb-service.yaml                       redis-slave-service.jsonmlbparks-service.yaml  
+mlbparks-deployment.yaml  mongodb-service.yaml                       redis-slave-service.jsonmlbparks-service.yaml
 frontend-deployment.yaml  mongodb-claim0-persistentvolumeclaim.yaml  redis-master-service.yaml
 frontend-service.yaml     mongodb-deployment.yaml                    redis-slave-deployment.yaml
 redis-master-deployment.yaml
-``` 
+```
 
 When multiple docker-compose files are provided the configuration is merged. Any configuration that is common will be over ridden by subsequent file.
- 
+
 ### OpenShift
 
 ```sh
@@ -276,11 +273,11 @@ It also supports creating buildconfig for build directive in a service. By defau
 
 ```sh
 $ kompose --provider openshift --file buildconfig/docker-compose.yml convert
-WARN [foo] Service cannot be created because of missing port. 
-INFO OpenShift Buildconfig using git@github.com:rtnpro/kompose.git::master as source. 
+WARN [foo] Service cannot be created because of missing port.
+INFO OpenShift Buildconfig using git@github.com:rtnpro/kompose.git::master as source.
 INFO OpenShift file "foo-deploymentconfig.yaml" created     
 INFO OpenShift file "foo-imagestream.yaml" created          
-INFO OpenShift file "foo-buildconfig.yaml" created 
+INFO OpenShift file "foo-buildconfig.yaml" created
 ```
 
 **Note**: If you are manually pushing the Openshift artifacts using ``oc create -f``, you need to ensure that you push the imagestream artifact before the buildconfig artifact, to workaround this Openshift issue: https://github.com/openshift/origin/issues/4518 .
@@ -296,12 +293,12 @@ $ kompose --file ./examples/docker-guestbook.yml up
 We are going to create Kubernetes deployments and services for your Dockerized application.
 If you need different kind of resources, use the 'kompose convert' and 'kubectl create -f' commands instead.
 
-INFO Successfully created service: redis-master   
-INFO Successfully created service: redis-slave    
-INFO Successfully created service: frontend       
+INFO Successfully created service: redis-master
+INFO Successfully created service: redis-slave
+INFO Successfully created service: frontend
 INFO Successfully created deployment: redis-master
 INFO Successfully created deployment: redis-slave
-INFO Successfully created deployment: frontend    
+INFO Successfully created deployment: frontend
 
 Your application has been deployed to Kubernetes. You can run 'kubectl get deployment,svc,pods' for details.
 
@@ -332,13 +329,13 @@ $ kompose --file ./examples/docker-guestbook.yml --provider openshift up
 We are going to create OpenShift DeploymentConfigs and Services for your Dockerized application.
 If you need different kind of resources, use the 'kompose convert' and 'oc create -f' commands instead.
 
-INFO Successfully created service: redis-slave    
-INFO Successfully created service: frontend       
-INFO Successfully created service: redis-master   
+INFO Successfully created service: redis-slave
+INFO Successfully created service: frontend
+INFO Successfully created service: redis-master
 INFO Successfully created deployment: redis-slave
 INFO Successfully created ImageStream: redis-slave
-INFO Successfully created deployment: frontend    
-INFO Successfully created ImageStream: frontend   
+INFO Successfully created deployment: frontend
+INFO Successfully created ImageStream: frontend
 INFO Successfully created deployment: redis-master
 INFO Successfully created ImageStream: redis-master
 
@@ -354,9 +351,9 @@ svc/frontend       172.30.46.64                          <none>        80/TCP   
 svc/redis-master   172.30.144.56                         <none>        6379/TCP   8s
 svc/redis-slave    172.30.75.245                         <none>        6379/TCP   8s
 NAME               DOCKER REPO                           TAGS          UPDATED
-is/frontend        172.30.12.200:5000/fff/frontend                     
-is/redis-master    172.30.12.200:5000/fff/redis-master                 
-is/redis-slave     172.30.12.200:5000/fff/redis-slave    v1  
+is/frontend        172.30.12.200:5000/fff/frontend
+is/redis-master    172.30.12.200:5000/fff/redis-master
+is/redis-slave     172.30.12.200:5000/fff/redis-slave    v1
 ```
 
 Note:
@@ -368,11 +365,11 @@ Once you have deployed "composed" application to Kubernetes, `$ kompose down` wi
 
 ```sh
 $ kompose --file docker-guestbook.yml down
-INFO Successfully deleted service: redis-master   
+INFO Successfully deleted service: redis-master
 INFO Successfully deleted deployment: redis-master
-INFO Successfully deleted service: redis-slave    
+INFO Successfully deleted service: redis-slave
 INFO Successfully deleted deployment: redis-slave
-INFO Successfully deleted service: frontend       
+INFO Successfully deleted service: frontend
 INFO Successfully deleted deployment: frontend
 ```
 Note:
@@ -400,15 +397,15 @@ Using `kompose up` with a `build` key:
 
 ```sh
 $ kompose up
-INFO Build key detected. Attempting to build and push image 'docker.io/foo/bar' 
-INFO Building image 'docker.io/foo/bar' from directory 'build' 
-INFO Image 'docker.io/foo/bar' from directory 'build' built successfully 
-INFO Pushing image 'foo/bar:latest' to registry 'docker.io' 
-INFO Attempting authentication credentials 'https://index.docker.io/v1/ 
-INFO Successfully pushed image 'foo/bar:latest' to registry 'docker.io' 
-INFO We are going to create Kubernetes Deployments, Services and PersistentVolumeClaims for your Dockerized application. If you need different kind of resources, use the 'kompose convert' and 'kubectl create -f' commands instead. 
- 
-INFO Deploying application in "default" namespace 
+INFO Build key detected. Attempting to build and push image 'docker.io/foo/bar'
+INFO Building image 'docker.io/foo/bar' from directory 'build'
+INFO Image 'docker.io/foo/bar' from directory 'build' built successfully
+INFO Pushing image 'foo/bar:latest' to registry 'docker.io'
+INFO Attempting authentication credentials 'https://index.docker.io/v1/
+INFO Successfully pushed image 'foo/bar:latest' to registry 'docker.io'
+INFO We are going to create Kubernetes Deployments, Services and PersistentVolumeClaims for your Dockerized application. If you need different kind of resources, use the 'kompose convert' and 'kubectl create -f' commands instead.
+
+INFO Deploying application in "default" namespace
 INFO Successfully created Service: foo            
 INFO Successfully created Deployment: foo         
 
@@ -461,7 +458,7 @@ The `*-daemonset.yaml` files contain the Daemon Set objects
 If you want to generate a Chart to be used with [Helm](https://github.com/kubernetes/helm) simply do:
 
 ```sh
-$ kompose convert -c 
+$ kompose convert -c
 INFO Kubernetes file "web-svc.yaml" created
 INFO Kubernetes file "redis-svc.yaml" created
 INFO Kubernetes file "web-deployment.yaml" created
@@ -491,7 +488,7 @@ For example:
 
 ```yaml
 version: "2"
-services: 
+services:
   nginx:
     image: nginx
     dockerfile: foobar
@@ -499,7 +496,7 @@ services:
     cap_add:
       - ALL
     container_name: foobar
-    labels: 
+    labels:
       kompose.service.type: nodeport
 ```
 

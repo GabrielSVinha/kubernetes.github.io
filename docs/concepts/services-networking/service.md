@@ -466,9 +466,9 @@ metadata:
 {% capture azure %}
 ```yaml
 [...]
-metadata: 
+metadata:
     name: my-service
-    annotations: 
+    annotations:
         service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 [...]
 ```

@@ -29,22 +29,22 @@ Nvidia GPUs can be consumed via container level resource requirements using the 
 
 ```yaml
 apiVersion: v1
-kind: Pod 
+kind: Pod
 metadata:
   name: gpu-pod
-spec: 
-  containers: 
-    - 
+spec:
+  containers:
+    -
       name: gpu-container-1
       image: gcr.io/google_containers/pause:2.0
-      resources: 
-        limits: 
+      resources:
+        limits:
           alpha.kubernetes.io/nvidia-gpu: 2 # requesting 2 GPUs
     -
       name: gpu-container-2
       image: gcr.io/google_containers/pause:2.0
-      resources: 
-        limits: 
+      resources:
+        limits:
           alpha.kubernetes.io/nvidia-gpu: 3 # requesting 3 GPUs
 ```
 

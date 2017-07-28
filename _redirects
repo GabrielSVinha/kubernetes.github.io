@@ -104,7 +104,7 @@
 /docs/tasks/configure-pod-container/limit-range					/docs/tasks/administer-cluster/cpu-memory-limit		301
 /docs/tasks/configure-pod-container/romana-network-policy		/docs/tasks/administer-cluster/romana-network-policy		301
 /docs/tasks/configure-pod-container/weave-network-policy		/docs/tasks/administer-cluster/weave-network-policy			301
-/docs/tasks/configure-pod-container/assign-cpu-ram-container	/docs/tasks/configure-pod-container/assign-memory-resource	301	
+/docs/tasks/configure-pod-container/assign-cpu-ram-container	/docs/tasks/configure-pod-container/assign-memory-resource	301
 
 /docs/tasks/kubectl/get-shell-running-container					/docs/tasks/debug-application-cluster/get-shell-running-container		301
 /docs/tasks/kubectl/install										/docs/tasks/tools/install-kubectl		301
