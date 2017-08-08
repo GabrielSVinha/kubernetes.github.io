@@ -18,8 +18,6 @@ cid: caseStudies
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor est a dolor dapibus, sed mattis velit vestibulum. Nullam condimentum nisi in interdum varius. Curabitur bibendum justo et vehicula blandit. Maecenas sodales eleifend mi nec aliquam. Sed bibendum ornare odio nec lobortis. Maecenas accumsan tempus hendrerit. Phasellus elementum sit amet orci nec elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus facilisis eget ipsum at tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent dolor elit, posuere ut placerat ut, tempus et leo. Cras lobortis tincidunt justo eget fringilla. Donec hendrerit nunc in sollicitudin sagittis. Morbi justo leo, ullamcorper quis sollicitudin quis, pretium nec libero. Integer vitae enim mi. Pellentesque luctus vestibulum vulputate.
             </p>
-            <div class="feature">
-            </div>
         </div>
     </main>
 </section>
