@@ -2,6 +2,9 @@
 approvers:
 - chenopis
 title: Kubernetes Documentation
+layout: basic
+class: gridPage
+cid: userJourneys
 ---
 
 
