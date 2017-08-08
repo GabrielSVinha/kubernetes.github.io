@@ -4,15 +4,42 @@ approvers:
 title: Ramping up with Kubernetes
 layout: basic
 class: gridPage
+cid: caseStudies
 ---
 
+<section id="hero" class="light-text">
+    <h1>Ramping up with Kubernetes</h1>
+</section>
+
+<section id="mainContent">
+    <main>
+        <div class="content">
+            <h3>Getting to know Kubernetes</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor est a dolor dapibus, sed mattis velit vestibulum. Nullam condimentum nisi in interdum varius. Curabitur bibendum justo et vehicula blandit. Maecenas sodales eleifend mi nec aliquam. Sed bibendum ornare odio nec lobortis. Maecenas accumsan tempus hendrerit. Phasellus elementum sit amet orci nec elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus facilisis eget ipsum at tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent dolor elit, posuere ut placerat ut, tempus et leo. Cras lobortis tincidunt justo eget fringilla. Donec hendrerit nunc in sollicitudin sagittis. Morbi justo leo, ullamcorper quis sollicitudin quis, pretium nec libero. Integer vitae enim mi. Pellentesque luctus vestibulum vulputate.
+            </p>
+            <div class="feature">
+            </div>
+        </div>
+    </main>
+</section>
+
+<section class="details">
+    <main>
+        <div class="content">
+            <h4>Foundation</h4>
+            <p>
+                Donec ac quam vitae risus ultricies facilisis sed at velit. Nam condimentum enim felis, vitae tincidunt odio tincidunt et. Nulla eget efficitur leo, luctus volutpat justo. Phasellus pulvinar augue eu semper porta. Cras id maximus lacus. Sed vel rhoncus neque. Vestibulum ut turpis nec nisl pellentesque dignissim. Quisque ut facilisis metus. Aenean bibendum id lacus at cursus. Aenean vitae nunc vel odio tincidunt luctus eget auctor ex. Fusce sit amet fermentum metus. Nulla quam elit, aliquam eget finibus sed, auctor in lorem. Pellentesque eleifend augue mi, vel tincidunt mi accumsan id.
+            </p>
+        </div>
+    </main>
+</section>
 
 <section class="bullets">
     <main>
-        <h3>Foundation</h3>
         <div class="content">
             <div class="bullet">
-                <h4>Concepts:</h4>
+                <h3>Concepts:</h3>
                 <ul>
                     <li><a href="">Containers</a></li>
                     <li><a href="">Microservices</a></li>
@@ -39,10 +66,19 @@ class: gridPage
     </main>
 </section>
 
+<section class="details">
+    <main>
+        <div class="content">
+            <h4>Intermediate</h4>
+            <p>
+                Donec ac quam vitae risus ultricies facilisis sed at velit. Nam condimentum enim felis, vitae tincidunt odio tincidunt et. Nulla eget efficitur leo, luctus volutpat justo. Phasellus pulvinar augue eu semper porta. Cras id maximus lacus. Sed vel rhoncus neque. Vestibulum ut turpis nec nisl pellentesque dignissim. Quisque ut facilisis metus. Aenean bibendum id lacus at cursus. Aenean vitae nunc vel odio tincidunt luctus eget auctor ex. Fusce sit amet fermentum metus. Nulla quam elit, aliquam eget finibus sed, auctor in lorem. Pellentesque eleifend augue mi, vel tincidunt mi accumsan id.
+            </p>
+        </div>
+    </main>
+</section>
 
 <section class="bullets">
     <main>
-        <h3>Intermediate</h3>
         <div class="content">
             <div class="bullet">
                 <h4>Concepts:</h4>
@@ -72,10 +108,19 @@ class: gridPage
     </main>
 </section>
 
+<section class="details">
+    <main>
+        <div class="content">
+            <h4>Advanced Topics</h4>
+            <p>
+                Donec ac quam vitae risus ultricies facilisis sed at velit. Nam condimentum enim felis, vitae tincidunt odio tincidunt et. Nulla eget efficitur leo, luctus volutpat justo. Phasellus pulvinar augue eu semper porta. Cras id maximus lacus. Sed vel rhoncus neque. Vestibulum ut turpis nec nisl pellentesque dignissim. Quisque ut facilisis metus. Aenean bibendum id lacus at cursus. Aenean vitae nunc vel odio tincidunt luctus eget auctor ex. Fusce sit amet fermentum metus. Nulla quam elit, aliquam eget finibus sed, auctor in lorem. Pellentesque eleifend augue mi, vel tincidunt mi accumsan id.
+            </p>
+        </div>
+    </main>
+</section>
 
 <section class="bullets">
     <main>
-        <h3>Advanced Topics</h3>
         <div class="content">
             <div class="bullet">
                 <h4>Concepts:</h4>
