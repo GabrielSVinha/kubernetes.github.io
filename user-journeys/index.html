@@ -10,31 +10,37 @@
       var info = {
         personas: {
           a_persona: {
+            label: "Application Developer",
             beginner: "a1: beginner stuff",
             intermediate: "a1: intermediate stuff",
             advanced: "a1: advanced stuff"
           },
           b_persona: {
+            label: "Cluster Operator",
             beginner: "b1: beginner stuff",
             intermediate: "b1: intermediate stuff",
             advanced: "b1: advanced stuff"
           },
           c_persona: {
+            label: "Migrating to Kubernetes",
             beginner: "c1: beginner stuff",
             intermediate: "c1: intermediate stuff",
             advanced: "c1: advanced stuff"
           },
           d_persona: {
+            label: "Customizing Kubernetes",
             beginner: "d1: beginner stuff",
             intermediate: "d1: intermediate stuff",
             advanced: "d1: advanced stuff"
           },
           e_persona: {
+            label: "Code Contributor",
             beginner: "e1: beginner stuff",
             intermediate: "e1: intermediate stuff",
             advanced: "e1: advanced stuff"
           },
           f_persona: {
+            label: "Ecosystem Contributor",
             beginner: "f1: beginner stuff",
             intermediate: "f1: intermediate stuff",
             advanced: "f1: advanced stuff"
@@ -42,31 +48,37 @@
         },
         groups: {
           a_groups: {
+            label: "a_groups",
             beginner: "a1: beginner stuff",
             intermediate: "a1: intermediate stuff",
             advanced: "a1: advanced stuff"
           },
           b_groups: {
+            label: "b_groups",
             beginner: "b1: beginner stuff",
             intermediate: "b1: intermediate stuff",
             advanced: "b1: advanced stuff"
           },
           c_groups: {
+            label: "c_groups",
             beginner: "c1: beginner stuff",
             intermediate: "c1: intermediate stuff",
             advanced: "c1: advanced stuff"
           },
           d_groups: {
+            label: "d_groups",
             beginner: "d1: beginner stuff",
             intermediate: "d1: intermediate stuff",
             advanced: "d1: advanced stuff"
           },
           e_groups: {
+            label: "e_groups",
             beginner: "e1: beginner stuff",
             intermediate: "e1: intermediate stuff",
             advanced: "e1: advanced stuff"
           },
           f_groups: {
+            label: "f_groups",
             beginner: "f1: beginner stuff",
             intermediate: "f1: intermediate stuff",
             advanced: "f1: advanced stuff"
@@ -74,31 +86,37 @@
         },
         areas: {
           a_areas: {
+            label: "a_areas",
             beginner: "a1: beginner stuff",
             intermediate: "a1: intermediate stuff",
             advanced: "a1: advanced stuff"
           },
           b_areas: {
+            label: "b_areas",
             beginner: "b1: beginner stuff",
             intermediate: "b1: intermediate stuff",
             advanced: "b1: advanced stuff"
           },
           c_areas: {
+            label: "c_areas",
             beginner: "c1: beginner stuff",
             intermediate: "c1: intermediate stuff",
             advanced: "c1: advanced stuff"
           },
           d_areas: {
+            label: "d_areas",
             beginner: "d1: beginner stuff",
             intermediate: "d1: intermediate stuff",
             advanced: "d1: advanced stuff"
           },
           e_areas: {
+            label: "e_areas",
             beginner: "e1: beginner stuff",
             intermediate: "e1: intermediate stuff",
             advanced: "e1: advanced stuff"
           },
           f_areas: {
+            label: "f_areas",
             beginner: "f1: beginner stuff",
             intermediate: "f1: intermediate stuff",
             advanced: "f1: advanced stuff"
@@ -106,31 +124,37 @@
         },
         challenges: {
           a_challenges: {
+            label: "a_challenges",
             beginner: "a1: beginner stuff",
             intermediate: "a1: intermediate stuff",
             advanced: "a1: advanced stuff"
           },
           b_challenges: {
+            label: "b_challenges",
             beginner: "b1: beginner stuff",
             intermediate: "b1: intermediate stuff",
             advanced: "b1: advanced stuff"
           },
           c_challenges: {
+            label: "c_challenges",
             beginner: "c1: beginner stuff",
             intermediate: "c1: intermediate stuff",
             advanced: "c1: advanced stuff"
           },
           d_challenges: {
+            label: "d_challenges",
             beginner: "d1: beginner stuff",
             intermediate: "d1: intermediate stuff",
             advanced: "d1: advanced stuff"
           },
           e_challenges: {
+            label: "e_challenges",
             beginner: "e1: beginner stuff",
             intermediate: "e1: intermediate stuff",
             advanced: "e1: advanced stuff"
           },
           f_challenges: {
+            label: "f_challenges",
             beginner: "f1: beginner stuff",
             intermediate: "f1: intermediate stuff",
             advanced: "f1: advanced stuff"
@@ -179,7 +203,7 @@
               var button = document.createElement('div');
               button.className += 'buttons';
               button.setAttribute('data-button', i);
-              button.innerText = i;
+              button.innerText = (info[c])[i].label;
               card.appendChild(button);
             }
             $('.cards').append(card);
