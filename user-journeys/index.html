@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
       var info = {
-        personas: {
+        users: {
           a_persona: {
             label: "Application Developer",
             beginner: "a1: beginner stuff",
@@ -16,148 +16,92 @@
             advanced: "a1: advanced stuff"
           },
           b_persona: {
-            label: "Cluster Operator",
+            label: "Application Architect",
             beginner: "b1: beginner stuff",
             intermediate: "b1: intermediate stuff",
             advanced: "b1: advanced stuff"
           },
           c_persona: {
-            label: "Migrating to Kubernetes",
+            label: "Cluster Operator",
             beginner: "c1: beginner stuff",
             intermediate: "c1: intermediate stuff",
             advanced: "c1: advanced stuff"
           },
           d_persona: {
-            label: "Customizing Kubernetes",
+            label: "Cluster Architect",
             beginner: "d1: beginner stuff",
             intermediate: "d1: intermediate stuff",
             advanced: "d1: advanced stuff"
           },
           e_persona: {
-            label: "Code Contributor",
+            label: "Network Engineer",
             beginner: "e1: beginner stuff",
             intermediate: "e1: intermediate stuff",
             advanced: "e1: advanced stuff"
           },
           f_persona: {
-            label: "Ecosystem Contributor",
+            label: "Platform Developer",
             beginner: "f1: beginner stuff",
             intermediate: "f1: intermediate stuff",
             advanced: "f1: advanced stuff"
           }
         },
-        groups: {
+        contributors: {
           a_groups: {
-            label: "a_groups",
+            label: "Code Contributor",
             beginner: "a1: beginner stuff",
             intermediate: "a1: intermediate stuff",
             advanced: "a1: advanced stuff"
           },
           b_groups: {
-            label: "b_groups",
+            label: "Ecosystem Contributor",
             beginner: "b1: beginner stuff",
             intermediate: "b1: intermediate stuff",
             advanced: "b1: advanced stuff"
           },
           c_groups: {
-            label: "c_groups",
+            label: "Docs Contributor",
             beginner: "c1: beginner stuff",
             intermediate: "c1: intermediate stuff",
             advanced: "c1: advanced stuff"
           },
           d_groups: {
-            label: "d_groups",
+            label: "Community Contributor",
             beginner: "d1: beginner stuff",
             intermediate: "d1: intermediate stuff",
             advanced: "d1: advanced stuff"
-          },
-          e_groups: {
-            label: "e_groups",
-            beginner: "e1: beginner stuff",
-            intermediate: "e1: intermediate stuff",
-            advanced: "e1: advanced stuff"
-          },
-          f_groups: {
-            label: "f_groups",
-            beginner: "f1: beginner stuff",
-            intermediate: "f1: intermediate stuff",
-            advanced: "f1: advanced stuff"
           }
         },
-        areas: {
+        migrators: {
           a_areas: {
-            label: "a_areas",
+            label: "Bare Metal On-Premises",
             beginner: "a1: beginner stuff",
             intermediate: "a1: intermediate stuff",
             advanced: "a1: advanced stuff"
           },
           b_areas: {
-            label: "b_areas",
+            label: "Virtualized Infrastructure",
             beginner: "b1: beginner stuff",
             intermediate: "b1: intermediate stuff",
             advanced: "b1: advanced stuff"
           },
           c_areas: {
-            label: "c_areas",
+            label: "Docker Compose and Swarm",
             beginner: "c1: beginner stuff",
             intermediate: "c1: intermediate stuff",
             advanced: "c1: advanced stuff"
           },
           d_areas: {
-            label: "d_areas",
+            label: "Heroku",
             beginner: "d1: beginner stuff",
             intermediate: "d1: intermediate stuff",
             advanced: "d1: advanced stuff"
           },
           e_areas: {
-            label: "e_areas",
+            label: "Mesos",
             beginner: "e1: beginner stuff",
             intermediate: "e1: intermediate stuff",
             advanced: "e1: advanced stuff"
-          },
-          f_areas: {
-            label: "f_areas",
-            beginner: "f1: beginner stuff",
-            intermediate: "f1: intermediate stuff",
-            advanced: "f1: advanced stuff"
-          },
-        },
-        challenges: {
-          a_challenges: {
-            label: "a_challenges",
-            beginner: "a1: beginner stuff",
-            intermediate: "a1: intermediate stuff",
-            advanced: "a1: advanced stuff"
-          },
-          b_challenges: {
-            label: "b_challenges",
-            beginner: "b1: beginner stuff",
-            intermediate: "b1: intermediate stuff",
-            advanced: "b1: advanced stuff"
-          },
-          c_challenges: {
-            label: "c_challenges",
-            beginner: "c1: beginner stuff",
-            intermediate: "c1: intermediate stuff",
-            advanced: "c1: advanced stuff"
-          },
-          d_challenges: {
-            label: "d_challenges",
-            beginner: "d1: beginner stuff",
-            intermediate: "d1: intermediate stuff",
-            advanced: "d1: advanced stuff"
-          },
-          e_challenges: {
-            label: "e_challenges",
-            beginner: "e1: beginner stuff",
-            intermediate: "e1: intermediate stuff",
-            advanced: "e1: advanced stuff"
-          },
-          f_challenges: {
-            label: "f_challenges",
-            beginner: "f1: beginner stuff",
-            intermediate: "f1: intermediate stuff",
-            advanced: "f1: advanced stuff"
           }
         }
      };
@@ -175,21 +119,17 @@
             var type = '';
 
             $('.cards > div').hide();
-            if (/personas/.test(e.currentTarget.className)) {
-              $('.card_personas').show();
-              type = 'personas';
+            if (/users/.test(e.currentTarget.className)) {
+              $('.card_users').show();
+              type = 'users';
             }
-            else if (/groups/.test(e.currentTarget.className)) {
-              $('.card_groups').show();
-              type = 'groups';
+            else if (/contributors/.test(e.currentTarget.className)) {
+              $('.card_contributors').show();
+              type = 'contributors';
             }
-            else if (/areas/.test(e.currentTarget.className)) {
-              $('.card_areas').show();
-              type = 'areas';
-            }
-            else if (/challenges/.test(e.currentTarget.className)) {
-              $('.card_challenges').show();
-              type = 'challenges'
+            else if (/migrators/.test(e.currentTarget.className)) {
+              $('.card_migrators').show();
+              type = 'migrators';
             }
             selected.type = type;
         });
@@ -210,7 +150,7 @@
           }
         }
 
-        $('.bar1 .personas').click();
+        $('.bar1 .users').click();
         $('.cards .buttons').on('click', handleCardClick);
         $('.tab1').on('click', function(e) {
             $('.tab1').removeClass('selected');
@@ -255,10 +195,9 @@
       </div>
 
       <div class="bar1">
-          <div class="navButton personas">Personas</div>
-          <div class="navButton groups">User&nbsp;Groups</div>
-          <div class="navButton areas">Focus&nbsp;Areas</div>
-          <div class="navButton challenges">Challenges</div>
+          <div class="navButton users">Users</div>
+          <div class="navButton contributors">Contributors</div>
+          <div class="navButton migrators">Migration Paths</div>
       </div>
 
       <div id="cardWrapper">
