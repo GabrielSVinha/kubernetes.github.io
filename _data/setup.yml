@@ -46,6 +46,7 @@ toc:
     - docs/getting-started-guides/kops.md
     - docs/getting-started-guides/kubespray.md
     - docs/getting-started-guides/running-cloud-controller.md
+    - docs/getting-started-guides/openstack-cloud-provider.md
 
   - title: On-Premise VMs
     section:
